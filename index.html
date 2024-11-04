@@ -9,6 +9,78 @@
 <body>
     <form enctype="multipart/form-data" action="index.html" method="get">
         <!-- FORM FIELDS HERE -->
+        <fieldset class="fields">
+            <legend>Personal info</legend>
+            <label for="name">Name:</label>
+            <input id="name" name="name" type="text">
+            <label for="email">Email:</label>
+            <input id="email" name="email" type="text" required>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" pattern="[a-zA-Z0-9]{12,}">
+            <label for="Birth">Date of Birth:</label>
+            <input type="date" name="Birth" id="Birth">
+        </fieldset>
+        <fieldset class="fields">
+            <legend>Preferences</legend>
+            <label for="color">Favorite Color</label>
+            <input class="color" type="color" name="color" id="color" value="#ffffff">
+            <label for="hobby">Hobby:</label>
+            <input class="hobby" type="text" list="hobby">
+            <datalist name="hobby" id="hobby">
+                <option value="Drawing"></option>
+                <option value="Swiming"></option>
+                <option value="Dancing"></option>
+            </datalist>
+            <label for="experience">Experience Level:</label>
+            <input class="exp" type="range" name="experience" id="experience" min="1" max="100">
+        </fieldset>
+        <fieldset class="fields">
+            <legend>Contact Preferences</legend>
+            <label for="email_contact">Preferred Contact Method:</label>
+            <select class="contact" name="email_contact" id="email_contact">
+                <option value="Email">Email</option>
+                <option value="Phone">Phone</option>
+                <option value="Mail">Email</option>
+            </select>
+            <div class="newsletter">
+                <label  for="subscribe">Subscribe to Newsletter</label>
+                <input  class="subs" type="checkbox" id="subscribe" name="subscribe">
+            </div>
+        </fieldset>
+        <fieldset class="fields">
+            <legend>Preferences:</legend>
+            <label for="">Gende:</label>
+            <div class="generes">
+                <div class="info">
+                    <input type="radio" name="Male" id="Male">
+            <label for="Male">Male</label>
+                </div>
+                <div class="info">
+                    <input type="radio" id="Female" name="Female">
+            <label for="Female">Female</label>
+                </div>
+                <div class="info">
+                    <input type="radio" id="Other" name="Other">
+            <label for="Other">Other</label>
+                </div>
+            </div>            
+        </fieldset>
+        <fieldset class="fields">
+            <legend>More information</legend>
+            <label for="info">Bio:</label>
+            <textarea name="info" id="info" rows="10"></textarea>
+        </fieldset>
+        <fieldset class="fields">
+            <legend>Upload Documents</legend>
+            <label for="doc">Resume and other certificates:</label>
+            <input class="docs" type="file" accept=".doc,.docx,.pdf,.jpg,.png" multiple>
+        </fieldset>
+        <fieldset class=" fields sub">
+            <legend>Submision</legend>
+            <input class="button" type="submit" name="submit" id="submit">
+            <input class="button" type="reset"
+            name="reset" id="reset">
+        </fieldset>
     </form>
 </body>
 </html>
